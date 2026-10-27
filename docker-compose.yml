@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./mern-demo/server
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb+srv://lddung21092005_db_user:V4SDrJ87WGHUECS8@cluster0.5ltdwrz.mongodb.net/
+
+  frontend:
+    build: ./mern-demo/client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

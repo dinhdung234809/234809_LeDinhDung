@@ -1,6 +1,3 @@
-*.log
-*.tpm
-bin/
-build/
-pycache/
+node_modules/
 .env
+.gradle/
